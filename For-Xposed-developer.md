@@ -7,22 +7,49 @@
 接上条；我们不推荐把 Xposed 模块重新创建。但是如果需要查询用户是否勾选了你这么模块，这样是可以的；直接copy如下代码判断即可：
 
 ```java
-    public static boolean isModuleActive(Context context) {
+    private static boolean isExpModuleActive(Context context) {
+
+        boolean isExp = false;
         if (context == null) {
             throw new IllegalArgumentException("context must not be null!!");
         }
 
-        ContentResolver contentResolver = context.getContentResolver();
-        if (contentResolver == null) {
-            return false;
+        try {
+            ContentResolver contentResolver = context.getContentResolver();
+            Uri uri = Uri.parse("content://me.weishu.exposed.CP/");
+            Bundle result = contentResolver.call(uri, "active", null, null);
+            if (result == null) {
+                return false;
+            }
+            isExp = result.getBoolean("active", false);
+        } catch (Throwable ignored) {
+        }
+        return isExp;
+    }
+```
+
+## 如何判断 Exp 创建了哪些应用？
+
+在某些情况下，我们需要处理应用列表。比如说，权限管理模块，可能用户只需要对特定的应用进行权限管理。因此，模块中需要列出所有应用，让用户选择。
+
+但是在 EXposed 中，并非所有APP都能加载Xposed模块。**只有EXposed创建过的模块才能使用Xposed 功能**。因此，需要有办法知道EXposed 中的APP列表。可以用如下方法获取：
+
+```java
+    private static List<String> getExpApps(Context context) {
+        Bundle result;
+        try {
+            result = context.getContentResolver().call(Uri.parse("content://me.weishu.exposed.CP/"), "apps", null, null);
+        } catch (Throwable e) {
+            return Collections.emptyList();
         }
 
-        Uri uri = Uri.parse("content://me.weishu.exposed.CP/");
-        Bundle result = contentResolver.call(uri, "active", null, null);
         if (result == null) {
-            return false;
+            return Collections.emptyList();
         }
-
-        return result.getBoolean("active", false);
+        List<String> list = result.getStringArrayList("apps");
+        if (list == null) {
+            return Collections.emptyList();
+        }
+        return list;
     }
 ```
