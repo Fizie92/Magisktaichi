@@ -15,4 +15,6 @@
 [激活码地址](https://github.com/tiann/EXposed/blob/master/beta_code)
 [文件地址](https://www.lanzous.com/b567813)
 
+**[内测码查询](http://www.catalpasu.cn/taichi/index.html)** （感谢群友 @夏妄 提供的支持）
+
 请仔细阅读每一个说明，谢谢配合。
