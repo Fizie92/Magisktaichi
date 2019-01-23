@@ -12,9 +12,10 @@
 
 注意使用浏览器打开，不要用QQ打开。
 
-[激活码地址](https://github.com/tiann/EXposed/blob/master/beta_code)
 [文件地址](https://www.lanzous.com/b567813)
 
-**[内测码查询](http://www.catalpasu.cn/taichi/index.html)** （感谢群友 @夏妄 提供的支持）
+关注微信公众号**虚拟框架**回复你的设备码，就能拿到内测码。
 
 请仔细阅读每一个说明，谢谢配合。
+
+感谢群友 @夏妄 @祈の韵 提供的支持
