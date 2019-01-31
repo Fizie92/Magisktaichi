@@ -1,5 +1,7 @@
 # 太极·Magisk
 
+**[For English users](https://github.com/tiann/EXposed/wiki/taichi-magisk-en)**
+
 ## 什么是 太极·Magisk？
 
 **太极·Magisk 是增强版的太极**。
