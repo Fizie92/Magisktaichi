@@ -31,7 +31,7 @@ In simple terms, follow the steps:
 
 Here are more informations in detail:
 
-[**Notice**](https://github.com/tiann/EXposed/wiki/%E5%87%86%E5%A4%87%E4%BA%8B%E9%A1%B9)
+[**Notice**](https://github.com/tiann/Tai-Chi/wiki/taichi-magisk-notice-en)
 
 [**Usage**](https://github.com/tiann/EXposed/wiki/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8)
 
