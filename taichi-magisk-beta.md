@@ -26,7 +26,7 @@ And what are the differences between TaiChi·Magisk and Xposed Framework?
 In simple terms, follow the steps:
 
 1. Install Magisk.
-2. Flash the magisk provided by TaiChi.
+2. Flash the magisk module provided by TaiChi. You can find it in [release page](https://github.com/tiann/Tai-Chi/releases).
 3. Install TaiChi App. 
 
 Here are more informations in detail:
