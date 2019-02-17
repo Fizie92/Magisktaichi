@@ -110,3 +110,39 @@ private static boolean isModleActive() {
         return list;
     }
 ```
+
+## 如何引导用户勾选模块？
+
+模块需要勾选才能激活，你可以直接跳转到 太极 内部的模块管理界面，引导用户激活模块，代码如下：
+
+```
+Intent t = new Intent("me.weishu.exp.ACTION_MODULE_MANAGE");
+t.setData(Uri.parse("package:" + "Your package name"));
+t.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+try {
+    startActivity(t);
+} catch (ActivityNotFoundException e) {
+    // TaiChi not installed.
+}
+```
+
+这段代码会跳转到太极的模块管理界面，太极会定位到此模块，然后高亮此模块，并且提示用户勾选它可以激活模块。
+
+## 如何引导用户添加应用？
+
+在太极中，只有添加到太极内部的应用才能使用Xposed模块，你可以引导用户把你需要的 APP 添加到太极中，代码如下：
+
+```java
+Intent t = new Intent("me.weishu.exp.ACTION_ADD_APP");
+t.setData(Uri.parse("package:" + "package1" + "|" + "package2" + "|" + "package3"));
+t.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+try {
+    startActivity(t);
+} catch (ActivityNotFoundException e) {
+    // TaiChi not installed or version below 4.3.4.
+}
+```
+
+跳转到太极之后，太极会在添加应用的界面勾选上你传递过去的包名，用户只需要点击创建，即可把需要的应用添加到太极。
+
+注意：magisk 版支持同时添加多个 APP，使用 `|` 分割包名即可。普通版**仅支持一次添加一个应用**，如果普通版传递多个，会直接忽略。
