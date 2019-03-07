@@ -2,6 +2,8 @@
 
 [中文版](https://github.com/tiann/EXposed/wiki/taichi-magisk-zh)
 
+[前往官网](https://taichi.cool) 查看详细信息。
+
 ## What is TaiChi·Magisk？
 
 **TaiChi·Magisk is the enhanced version of TaiChi**。
