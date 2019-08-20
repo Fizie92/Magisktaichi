@@ -16,7 +16,7 @@
 
 与rovo89 的 Xposed 相比，太极·Magisk 又有什么特点？
 
-1. 太极·Magisk 支持 Android 9.0。
+1. 太极·Magisk 支持 Android 9.0 以及最新的 Android 10.0。
 2. 太极·Magisk 不影响全局。可以只对特定的应用开启 Xposed 功能，无需使用 Xposed 的APP 运行起来就跟系统没有 Xposed 一样；完美契合某些金融/银行类APP。
 3. 太极·Magisk 针对APP的模块，无需重启即刻生效。
 4. 太极·Magisk 更不易被检测。太极的弱侵入特性不再修改 运行时，也不在全局环境中留下任何踪影；因此只要想要做到，可以轻松逃过各种代码类型的检测。
